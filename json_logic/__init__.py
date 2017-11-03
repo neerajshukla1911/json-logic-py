@@ -168,6 +168,7 @@ operations = {
     "max": lambda *args: max(args),
     "merge": merge,
     "count": lambda *args: sum(1 if a else 0 for a in args),
+    "replace": lambda a, b, c: a.replace(b, c) if isinstance(a, str) and isinstance(b, str) and  isinstance(c, str) else False,
 }
 
 
