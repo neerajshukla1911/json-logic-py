@@ -159,6 +159,7 @@ operations = {
     "if": if_,
     "log": lambda a: logger.info(a) or a,
     "in": lambda a, b: a in b if "__contains__" in dir(b) else False,
+    "nin": lambda a, b: a not in b if "__contains__" in dir(b) else False,
     "cat": lambda *args: "".join(str(arg) for arg in args),
     "+": plus,
     "*": lambda *args: reduce(lambda total, arg: total * float(arg), args, 1),
