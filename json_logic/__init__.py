@@ -170,6 +170,7 @@ operations = {
     "merge": merge,
     "count": lambda *args: sum(1 if a else 0 for a in args),
     "replace": lambda a, b, c: a.replace(b, c) if isinstance(a, str) and isinstance(b, str) and  isinstance(c, str) else False,
+    "lastin": lambda a: a[-1] if "__contains__" in dir(a) and len(a) else False
 }
 
 
